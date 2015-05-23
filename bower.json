@@ -1,0 +1,20 @@
+{
+  "name": "filmdmd",
+  "version": "0.0.0",
+  "authors": [
+    "Michael Botelho <saggiatoreblue@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "toastr": "~2.1.1"
+  }
+}
