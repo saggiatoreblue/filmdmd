@@ -1,0 +1,29 @@
+.user(ng-class="{'loggedin': identity.isAuthenticated()}" ng-controller="dmdUserLoginCtrl")
+    a.mobile-launch(href="#", toggle-class="open")
+        i.fa.fa-caret-left
+        span User Details
+
+
+    form.form-inline(ng-hide="identity.isAuthenticated()")
+        .form-group
+            input.form-control(placeholder="Username", ng-model="username")
+        .form-group
+            input.form-control(type="password", placeholder="Password", ng-model="password")
+        button.btn.btn-primary(ng-click="signin(username, password)") Sign In
+    ul.nav.navbar-nav(ng-show="identity.isAuthenticated()")
+        li
+            img(src="{{img}}")
+
+        li.dropdown
+            a.dropdown-toggle(href="", data-toggle="dropdown")
+                | {{identity.currentUser.firstName + " " + identity.currentUser.lastName }}
+                b.caret
+            ul.dropdown-menu
+                li
+                    a(href="/profile") User Profile
+                li
+                    a(href="", ng-click="signout()") Sign Out
+
+
+
+

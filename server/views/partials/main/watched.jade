@@ -1,0 +1,9 @@
+div(ng-controller="dmdWatchedCtrl")
+    h1.section-title Already watched
+    ul.nogos
+        li.clearfix(ng-repeat="watch in watched")
+            span.imgContainer
+                img.placeholder(src="img/placeholder.png")
+                img.animate-show(fade-in ng-src="https://image.tmdb.org/t/p/w396/{{watch.poster_path}}")
+            span.txt {{watch.title}}
+            button.btn.btn-default(ng-click="remove($index)") Remove

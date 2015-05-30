@@ -1,7 +1,17 @@
 extends ../includes/layout
 
 block main-content
-    section.content
-        div(ng-view)
+    snap-drawer(ng-include="'partials/main/navigation'")
 
-        h2= mongoMessage
+    snap-content.body
+        button.nav-toggle(snap-toggle)
+            span
+            span
+            span
+        .wrapper
+            .header-wrapper
+                    div(ng-include="'partials/account/user-login'")
+            section.content-wrapper
+                .content(ng-view ng-animate)
+
+

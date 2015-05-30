@@ -1,0 +1,9 @@
+div(ng-controller="dmdLaterCtrl")
+    h1.section-title Saved For Later
+    ul.nogos
+        li.clearfix(ng-repeat="l in later" )
+            span.imgContainer
+                img.placeholder(src="img/placeholder.png")
+                img.animate-show(fade-in ng-src="https://image.tmdb.org/t/p/w396/{{l.poster_path}}")
+            span.txt {{l.title}}
+            button.btn.btn-default(ng-click="remove($index)") Remove

@@ -15,6 +15,12 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "toastr": "~2.1.1"
+    "toastr": "~2.1.1",
+    "angular-snap": "~1.8.1",
+    "bootstrap": "~3.3.4",
+    "angular-animate": "~1.4.0"
+  },
+  "resolutions": {
+    "angular": "1.4.0"
   }
 }

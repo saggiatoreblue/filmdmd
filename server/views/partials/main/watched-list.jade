@@ -1,0 +1,9 @@
+div.center.page
+    h1.section-title List of Films you've watched
+    .selection.clearfix(ng-repeat="w in watched")
+        img.selection-img(ng-cloak, ng-src="https://image.tmdb.org/t/p/w396/{{w.poster_path}}")
+        .selection-details
+            p.title {{w.title}}
+                span Critics Rating : {{w.vote_average}}
+            p.synopsis {{w.overview}}
+            .btn.btn-default(ng-click="remove($index)") Remove

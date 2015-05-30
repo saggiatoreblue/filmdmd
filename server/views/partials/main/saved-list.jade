@@ -1,0 +1,9 @@
+div.center.page
+    h1.section-title Your Saved For Later List
+    .selection.clearfix(ng-repeat="l in later")
+        img.selection-img(ng-cloak, ng-src="https://image.tmdb.org/t/p/w396/{{l.poster_path}}")
+        .selection-details
+            p.title {{l.title}}
+                span Critics Rating : {{l.vote_average}}
+            p.synopsis {{l.overview}}
+            .btn.btn-default(ng-click="remove($index)") Remove

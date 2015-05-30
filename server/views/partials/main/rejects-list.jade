@@ -1,0 +1,9 @@
+div.center.page
+    h1.section-title Your Do Not Watch List
+    .selection.clearfix(ng-repeat="r in rejects")
+        img.selection-img(ng-cloak, ng-src="https://image.tmdb.org/t/p/w396/{{r.poster_path}}")
+        .selection-details
+            p.title {{r.title}}
+                span Critics Rating : {{r.vote_average}}
+            p.synopsis {{r.overview}}
+            .btn.btn-default(ng-click="remove($index)") Remove

@@ -1,0 +1,14 @@
+section.center.featured-wrapper(ng-controller="dmdFeaturedCtrl")
+    h1.section-title selection of the day
+    .selection.clearfix(preload-content)
+        img.selection-img.animate-show(ng-cloak, fade-in, ng-src="{{image}}")
+        .selection-details
+            p.title {{title}}
+                span Critics Rating : {{rating}}
+            p.synopsis {{synopsis}}
+
+            .btns
+                a.btn.btn-default.alpha(href="#" ng-click="watched()") I've already seen this
+                a.btn.btn-default(href="#" ng-click="later()") Save for later
+                a.btn.btn-default(href="#" ng-click="reject()") Not interested
+                a.btn.btn-default(href="#" ng-click="reload()") Show me another

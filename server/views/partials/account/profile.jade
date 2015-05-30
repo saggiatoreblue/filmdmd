@@ -1,0 +1,24 @@
+.container
+    .signup
+        .panel.panel-default.panel-success
+            .panel-heading
+                h3.panel-title User Profile
+            .panel-body
+                form(name="profileForm")
+                    .form-group
+                        label(for="firstName") First Name
+                        input.form-control(name="firstName" type="text" ng-model="firstName")
+                    .form-group
+                        label(for="lastName") Last Name
+                        input.form-control(name="lastName" type="text" ng-model="lastName")
+                    .form-group
+                        label(for="email") Email Address
+                        input.form-control(name="email" type="email" ng-model="email")
+                    .form-group
+                        label(for="username") Username
+                        input.form-control(name="username" type="text" ng-model="username")
+                    .form-group
+                        label(for="password") Password
+                        input.form-control(name="password" type="password" ng-model="password")
+
+                    button.btn.btn-default(ng-click="update()", ng-disabled="signupForm.$invalid") Update

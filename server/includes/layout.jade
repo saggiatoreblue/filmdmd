@@ -2,11 +2,16 @@ doctype
 html
     head
         link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
-        link(rel="stylesheet" href="/css/bootstrap.min.css")
-        link(rel="styleSheet" href="/css/site.min.css")
+        link(rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="styleSheet" href="vendor/toastr/toastr.min.css")
+        link(rel="styleSheet" href="/css/site.css")
+        link(rel="styleSheet" href="vendor/angular-snap/angular-snap.css")
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
         base(href="/")
 
-    body(ng-app="app")
+    body(ng-app="dmdApp", ng-cloak)
+    include currentUser
+
     block main-content
 
     include scripts
