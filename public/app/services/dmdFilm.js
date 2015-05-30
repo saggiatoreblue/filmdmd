@@ -2,7 +2,7 @@ dmdApp.factory('dmdFilm', function($http, $q) {
 
     var minVote = 6; //I get angry if its really bad
     var api_key = '?api_key=eb012db0eee1007efd6f2a0ec9affd53';
-    var base_url = 'http://api.themoviedb.org/';
+    var base_url = 'https://api.themoviedb.org/';
     var vote_average = '&vote_average.gte=' + minVote;
     var release_date = '2000/01/01'; // for some reason production value makes me like a movie to a degree
 
